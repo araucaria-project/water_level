@@ -3,4 +3,5 @@ Water level sensor based on Arduino UNO and Raspberry Pi 4B in OCA
 
 #Instalation
 
-water_level_arudio/
+Open directory water_level_arduino in Arduino IDE, compile the project and 
+water_level_arudio/water_level
