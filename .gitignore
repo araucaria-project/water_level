@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+__pycache__
+
+poetry.lock
+
+water_level.egg-info/
+
+venv/
+.venv/
+.ipynb_checkpoints/
