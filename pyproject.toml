@@ -9,7 +9,6 @@ packages = [{include = "water_level"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 pyserial = ">=3.5"
-oca_nats_config = {git = "https://github.com/araucaria-project/oca_nats_config.git"}
 serverish = {git = "https://github.com/AkondLab/serverish.git"}
 
 
