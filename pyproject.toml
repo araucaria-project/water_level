@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "water-level"
-version = "1.1.0"
+version = "1.1.1"
 description = ""
 authors = ["pwielgor <pwielgor@camk.edu.pl>"]
 readme = "README.md"
@@ -9,7 +9,7 @@ packages = [{include = "water_level"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 pyserial = ">=3.5"
-serverish = {git = "https://github.com/AkondLab/serverish.git"}
+serverish = {git = "https://github.com/AkondLab/serverish.git", branch = "ernest_development"}
 
 
 [tool.poetry.scripts]
