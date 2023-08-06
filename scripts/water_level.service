@@ -1,0 +1,6 @@
+[Unit]
+Description=Send water level to nats server
+
+[Service]
+User=observer
+ExecStart=/usr/bin/update_water_level.sh

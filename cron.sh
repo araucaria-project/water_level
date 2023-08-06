@@ -1,1 +1,0 @@
-python /home/observer/src/water_level/read_from_arduino.py

@@ -1,0 +1,9 @@
+[Unit]
+Description=Send water level to nats server
+
+[Timer]
+OnBootSec=60min
+OnUnitActiveSec=60min
+
+[Install]
+WantedBy=timers.target
