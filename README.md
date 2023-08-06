@@ -15,6 +15,10 @@ WARNING the `poetry` package is required for installation.
 cd water_level
 poetry install
 ```
+WARNING! Sometimes `poetry` hangs when installing packages, in which case you should run them with the `sudo` option
+```bash
+sudo poetry install
+```
 
 ### Automatic update
 
@@ -34,7 +38,7 @@ sudo ln -s [path-to-project]/water_level/scripts/water_level.timer water_level.t
 Next go to and make symlink to auto update script:
 ```bash
 cd /usr/bin/
-sudo ln -s [path-to-project]/water_level/scripts/update_water.sh update_water.sh
+sudo ln -s [path-to-project]/water_level/scripts/update_water_level.sh update_water_level.sh
 ```
 
 Now start the services.
