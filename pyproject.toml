@@ -9,7 +9,7 @@ packages = [{include = "water_level"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 pyserial = ">=3.5"
-serverish = {git = "https://github.com/AkondLab/serverish.git", branch = "ernest_development"}
+serverish = {git = "https://github.com/AkondLab/serverish.git"}
 
 
 [tool.poetry.scripts]
