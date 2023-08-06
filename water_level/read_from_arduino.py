@@ -41,7 +41,7 @@ def main():
         ser.write("0".encode())
         line2 = ser.read(size=18)
 
-        ts = [*time.localtime()]  # read timestamp as list, used to sent to NATS
+        ts = [*time.gmtime()]  # read timestamp as list, used to sent to NATS
 
         # print(line2)
         line = line2.decode('utf-8')
