@@ -4,9 +4,10 @@ import time
 import configparser
 import serial
 from serverish.messenger import Messenger, get_publisher
+from definitions import ROOT_DIR
 
-config = configparser.ConfigParser()  # init configuration rader
-config.read('../water_config.ini')  # read config file
+config = configparser.ConfigParser()  # init configuration reader
+config.read(f'{ROOT_DIR}/water_config.ini')  # read config file
 
 
 async def send2nats(level: int, ts: list):
