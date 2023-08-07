@@ -2,5 +2,5 @@
 Description=Send water level to nats server
 
 [Service]
-User=observer
+User=poweruser
 ExecStart=/usr/bin/update_water_level.sh
