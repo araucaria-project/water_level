@@ -7,5 +7,5 @@ cd $DIR_PATH
 cd ..
 
 # run program
-poetry run water_level
+sudo poetry run water_level
 echo "Water level was sent to NATS"
