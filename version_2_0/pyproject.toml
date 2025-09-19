@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "water-level-monitor"
+version = "3.0.0"
+description = "A script to monitor water level using Arduino and an ultrasonic sensor."
+authors = ["pwielgor <pwielgor@camk.edu.pl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyserial = ">=3.5"
+serverish = {git = "https://github.com/AkondLab/serverish.git"}
+nats-py = "^2.3.1"
+"RPi.GPIO" = "^0.7.1"
+
+[tool.poetry.scripts]
+water_level = "water_level:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
