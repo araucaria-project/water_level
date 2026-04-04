@@ -1,6 +1,8 @@
 # water_level
 Water level sensor based on Arduino UNO and Raspberry Pi 4B in OCA
 
+> [!IMPORTANT]
+> All the necessary and actual informations are included in the ```_version_3_0``` folder
 
 ## Installation
 
