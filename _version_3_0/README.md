@@ -14,8 +14,8 @@
 4) ```sudo apt install pipx i2c-tools python3-dev build-essential -y```
 5) ```sudo raspi-config``` ==> Interface Options ==> I2C ==> YES ==> FINISH
 6) ```sudo nano /boot/firmware/config.txt``` ==> find ```dtparam=audio=on``` and change to ```dtparam=audio=off```
-7) ```sudo pipx install poetry```
-8) ```sudo pipx ensurepath```
+7) ```pipx install poetry``` (DO NOT USE SUDO)
+8) ```pipx ensurepath``` (DO NOT USE SUDO)
 9) Go to directory *water-level*
 10) Add all files
 11) Initialize poetry ```poetry install```
