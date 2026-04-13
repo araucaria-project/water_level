@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "water-level"
+version = "0.3.0"
+description = "A water level monitoring system based on the RPi Zero W and pressure sensor which give voltage signal"
+authors = ["Piotr Żuk pzuk@camk.edu.pl>"]
+readme = "README.md"
+packages = [{include = "water-level"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+nats-py = "^2.7.2"
+rpi-ws281x = "^5.0.0"
+pi-ina219 = "^1.4.0"
+RPi-GPIO = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
