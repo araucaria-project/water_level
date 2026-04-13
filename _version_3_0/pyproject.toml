@@ -4,7 +4,8 @@ version = "0.3.0"
 description = "A water level monitoring system based on the RPi Zero W and pressure sensor which give voltage signal"
 authors = ["Piotr Żuk <pzuk@camk.edu.pl>"]
 readme = "README.md"
-packages = [{include = "water-level"}]
+#packages = [{include = "water-level"}]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.9"
