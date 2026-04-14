@@ -7,6 +7,8 @@ from rpi_ws281x import PixelStrip, Color
 from ina219 import INA219
 from nats.aio.client import Client as NATS
 import json
+import datetime
+import uuid
 
 NATS_SERVER = "nats://nats.oca.lan:4222"
 NATS_TOPIC = "telemetry.water.level"
@@ -133,7 +135,33 @@ async def nats_task():
                 await nc.connect(NATS_SERVER, connect_timeout=2)
                 print("Connected to NATS!")
                 
-            payload = json.dumps(water_state).encode('utf-8')
+            now = datetime.datetime.now()
+            ts_array = [now.year, now.month, now.day, now.hour, now.minute, now.second, now.microsecond]
+            
+            short_id = uuid.uuid4().hex[:6]
+            
+            payload_dict = {
+                "data": {
+                    "ts": ts_array,
+                    "version": "1.0.0",
+                    "measurements": {
+                        "voltage": water_state["voltage"],
+                        "m3": water_state["m3"],
+                        "liters": water_state["liters"],
+                        "status": water_state["status"]
+                    }
+                },
+                "meta": {
+                    "id": f"water-{short_id}",
+                    "sender": "WaterLevel-RPI",
+                    "ts": ts_array,
+                    "trace_level": 10,
+                    "message_type": "",
+                    "tags": []
+                }
+            }
+                
+            payload = json.dumps(payload_dict).encode('utf-8')
             await nc.publish(NATS_TOPIC, payload)
             
         except Exception as e:
