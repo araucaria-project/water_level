@@ -124,7 +124,7 @@ async def led_task():
             breath_brightness = 50
             breath_direction = 5
 
-        await asyncio.sleep(0.05)
+        await asyncio.sleep(10)
 
 async def nats_task():
     nc = NATS()
@@ -167,7 +167,7 @@ async def nats_task():
         except Exception as e:
             print(f"NATS error: {e}")
             
-        await asyncio.sleep(1.0)
+        await asyncio.sleep(10)
 
 def handle_button_1(channel):
     print("Button 1 clicked")
