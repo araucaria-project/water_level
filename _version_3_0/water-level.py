@@ -94,7 +94,7 @@ async def sensor_task():
             print(f"Sensor error: {e}")
             water_state["status"] = "sensor_error"
             
-        await asyncio.sleep(0.5)
+        await asyncio.sleep(10)
 
 async def led_task():
     breath_brightness = 0
