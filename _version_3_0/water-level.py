@@ -24,8 +24,8 @@ NATS_SERVER = "nats://nats.oca.lan:4222"
 NATS_TOPIC = "telemetry.water.level"
 
 # Loop intervals [seconds]
-NATS_PUBLISH_INTERVAL = 10.0
-SENSOR_INTERVAL = 2.0
+NATS_PUBLISH_INTERVAL = 60.0
+SENSOR_INTERVAL = 10.0
 LED_INTERVAL = 0.03
 
 MAX_M3 = 20.0
